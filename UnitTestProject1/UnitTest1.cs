@@ -6,30 +6,32 @@ namespace UnitTestProject1
     [TestClass]
     public class UnitTest1
     {
-        [TestMethod]
-
-        public void Maximum_Value_First_Parameter_Should_Return_Maximum_Value()
+        //TC1.1
+        public void Passing_Integer_Array_Should_Return_Maximum_Value()
         {
-            FindMaximumNum find = new FindMaximumNum();
-            string max = find.MaximumStringNumber("apple", "banana", "peach");
-            Assert.AreEqual("peach", max);
+            int[] intArray = { 1, 2, 3 };
+            FindMax<int> first = new FindMax<int>(intArray);
+            int actual = first.FindMaxValue();
+            Assert.AreEqual(30, actual);
         }
         //TC1.2
         [TestMethod]
-        public void Maximum_Value_Second_Parameter_Should_Return_Maximum_Value()
+        public void Passing_Float_Array_Should_Return_Maximum_Value()
         {
-            FindMaximumNum find = new FindMaximumNum();
-            string max = find.MaximumStringNumber("apple", "banana", "peach");
-            Assert.AreEqual("peach", max);
+            float[] floatArray = { 11.1f, 12.2f, 13.3f };
+            FindMax<float> secod = new FindMax<float>(floatArray);
+            float actual = secod.FindMaxValue();
+            Assert.AreEqual(30.5f, actual);
         }
         //TC1.3
         [TestMethod]
-        public void Maximum_Value_Third_Parameter_Should_Return_Maximum_Value()
+        public void Passing_String_Array_Should_Return_Maximum_Value()
         {
 
-            FindMaximumNum find = new FindMaximumNum();
-            string max = find.MaximumStringNumber("apple", "banana", "peach");
-            Assert.AreEqual("peach", max);
+            string[] strArray = { "apple", "banana", "peach" };
+            FindMax<string> third = new FindMax<string>(strArray);
+            string actual = third.FindMaxValue();
+            Assert.AreEqual(3, actual);
         }
     }
 }
