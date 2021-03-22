@@ -11,16 +11,16 @@ namespace UnitTestProject1
         public void Maximum_Value_First_Parameter_Should_Return_Maximum_Value()
         {
             FindMaximumNum find = new FindMaximumNum();
-            int actual = find.MaximumIntegerNumber(1, 2, 3);
-            Assert.AreEqual(3, actual);
+            float max = find.MaximumFloatNumber(11.1f, 12.2f, 13.3f);
+            Assert.AreEqual(13.3f, max);
         }
         //TC1.2
         [TestMethod]
         public void Maximum_Value_Second_Parameter_Should_Return_Maximum_Value()
         {
             FindMaximumNum find = new FindMaximumNum();
-            int actual = find.MaximumIntegerNumber(3, 2, 1);
-            Assert.AreEqual(3, actual);
+            float max = find.MaximumFloatNumber(11.1f, 12.2f, 13.3f);
+            Assert.AreEqual(13.3f, max);
         }
         //TC1.3
         [TestMethod]
@@ -28,8 +28,8 @@ namespace UnitTestProject1
         {
 
             FindMaximumNum find = new FindMaximumNum();
-            int actual = find.MaximumIntegerNumber(2, 1, 3);
-            Assert.AreEqual(3, actual);
+            float max = find.MaximumFloatNumber(11.1f, 12.2f, 13.3f);
+            Assert.AreEqual(13.3f, max);
         }
     }
 }
