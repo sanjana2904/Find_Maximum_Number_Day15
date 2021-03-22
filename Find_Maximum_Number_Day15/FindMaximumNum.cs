@@ -25,5 +25,9 @@ namespace Find_Maximum_Number_Day15
            // return;
             return sorted[sorted.Length - 1];
         }
+        public void PrintMaxValue()
+        {
+            Console.WriteLine(this.FindMaxValue());
+        }
     }
 }
